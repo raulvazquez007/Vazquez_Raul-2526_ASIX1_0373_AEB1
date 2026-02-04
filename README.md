@@ -501,3 +501,4 @@ Un documento HTML define la estructura básica de una página web. Contiene dos 
 5. Dentro del cmd escribiremos git init, despues git add .
 6. Una vez hecho eso cuando queramos subir cambios que hemos realizado en el visual escribiremos git commit -m "texto informativo"
 7. Y por ultimo escribiremos git push origin main y ya estaran subidos los cambios.
+
