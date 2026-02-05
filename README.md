@@ -60,428 +60,335 @@ Ej: Texto con enlace a nota de pie de pagina [^1]
 
 ## HTML
 
-### Introduccion a HTML
+## Introducción a HTML
+
+**HTML (HyperText Markup Language)** es el lenguaje estándar utilizado para crear páginas web.  
+Es el lenguaje más importante de Internet, ya que sin HTML el navegador no podría mostrar ningún contenido.
 
-· **HTML** (HyperText Markup Language)es el lenguaje estándar que sirve para crear páginas web. Lenguaje más importante de Internet dado que sin HTML no se vería nada en el navegador.
+HTML **define la estructura y el contenido** de una página web mediante etiquetas, como `<p>`, `<h1>`, `<body>`, etc.  
+No se encarga del diseño visual (CSS) ni del comportamiento interactivo (JavaScript).
 
-· **HTML** define la estructura y el contenido (es decir, si hay una imagen, una lista de elementos, un enlace, un párrafo, un titular, etc...) de las páginas web mediante etiquetas, es muy adaptable, tiene una estructura lógica y es muy fácil de entender e interpretar. DESCRIBE EL CONTENIDO.
+HTML **no es un lenguaje de programación**, ya que no tiene variables, bucles, condiciones ni funciones.
+
+### Significado de HTML
+
+- **HyperText**: texto que enlaza con otros recursos.
+- **Markup**: el contenido se organiza mediante etiquetas.
+- **Language**: tiene reglas y estructura propias.
+
+---
+
+## Elementos HTML
 
-· No se dedica a ver cómo se interactúa con el contenido (Javascript, PHP, etc...), ni se preocupa por la presentación o estilizado del contenido, es decir, de cómo se ve el contenido (para eso tenemos CSS).
+HTML está formado por **elementos**, que son los bloques básicos de una página web.
+
+Un elemento HTML suele estar compuesto por:
+
+1. **Etiqueta de apertura**  
+   `<p>`
+2. **Contenido**  
+   Texto
+3. **Etiqueta de cierre**  
+   `</p>`
 
-· Los elementos HTML son los bloques de construcción de las páginas HTML.
+### Ejemplo
+```html
+<p>Hola mundo</p>
+Atributos HTML
+Los atributos añaden información adicional a los elementos.
 
-· Cada elemento HTML está delimitado por etiquetas, como &lt;body&gt;, &lt;head&gt;, &lt;p&gt;, &lt;h1&gt;, etc.
+Ejemplo
+<p class="gato">Mi gato es muy gruñón</p>
+class → nombre del atributo
 
-Las siglas de HTML corresponden con **“HyperText Markup Language”**, que tiene el siguiente significado:
+gato → valor del atributo
 
-· **HyperText**, su significado es hipertexto, que no es más que un texto que enlaza con otros contenidos, que pueden ser otro texto u otro archivo. Esto es la base del funcionamiento de la web tal y como la conocemos, que no es más que páginas y recursos interconectados.
+Normas de los atributos
+Siempre van en la etiqueta de apertura
 
-· **Markup**, que significa marca o etiqueta, ya que todas las páginas web están construidas en base a etiquetas, desde las primeras versiones hasta las últimas etiquetas de HTML5. Un ejemplo de una etiqueta HTML es la que identifica un párrafo, que se compone de la etiqueta, el contenido de la etiqueta y el cierre del párrafo: &lt;p&gt;HOLA&lt;/p&gt;. 
+Siguen el formato nombre="valor"
 
-· **Language**, cuyo significado es lenguaje, porque HTML es un lenguaje, es decir, tiene sus normas, tiene su estructura y una serie de convenciones que nos sirven para definir tanto la estructura como el contenido de una web. Algo importante a tener en cuenta y con lo que no hay que confundirse, es que porque HTML sea un lenguaje no quiere decir que sea un lenguaje de programación.
+Deben ir entre comillas
 
-#### Introduccion a HTML (elementos)
+Anidamiento y elementos vacíos
+HTML permite anidar elementos, es decir, colocar unos dentro de otros.
 
-Es decir, que HTML no es un lenguaje de programación; es un lenguaje que define la estructura de su contenido. HTML consiste en una serie de elementos que usarás para encerrar diferentes partes del contenido para que se vean o comporten de una determinada manera.
+Ejemplo correcto
+<p><strong>Texto importante</strong></p>
+Algunos elementos no tienen contenido ni etiqueta de cierre.
+Se llaman elementos vacíos.
 
-Esto implica que la información a mostrar ha de ir “etiquetada” para formar elementos que el navegador web sepa interpretar de qué tipo de información se trata y cómo tal sepa cómo representarlos.
+Ejemplo
+<img src="images/logo.png" alt="Logo de la web">
+Estructura básica de un documento HTML
+Toda página HTML tiene una estructura básica:
 
-##### Las partes principales del elemento son:
-· **La etiqueta de apertura:** consiste en el nombre del elemento (en este caso, p), encerrado por(< >) de apertura y cierre. Establece dónde comienza o empieza a tener efecto el elemento —en este caso, dónde es el comienzo del párrafo—.
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mi página web</title>
+  </head>
+  <body>
+    <h1>Título principal</h1>
+    <p>Contenido de la página</p>
+  </body>
+</html>
+Elementos principales
+<!DOCTYPE html>: indica el tipo de documento
 
-· **La etiqueta de cierre:** es igual que la etiqueta de apertura, excepto que incluye una barra de cierre (/) antes del nombre de la etiqueta. Establece dónde termina el elemento —en este caso dónde termina el párrafo—.
-
-· **El contenido:** este es el contenido del elemento, que en este caso es sólo texto.
-
-· **El elemento:** la etiqueta de apertura, más la etiqueta de cierre, más el contenido equivale al elemento.
-
-#### Introduccion a HTML (atributos)
-
-Los elementos pueden también tener atributos.
-
-Los atributos contienen información adicional acerca del elemento, la cual no quieres que aparezca en el contenido real del elemento.
-En el siguiente ejemplo:
-
-&lt;p class="gato">Mi gato es muy gruñón&lt;/p&gt;
-
-· class es el **nombre del atributo**
-
-· gato es el **valor del atributo**
-
-*Los atributos siempre se incluyen en la etiqueta de apertura de un elemento y deben tener:*
-
-· Un espacio entre el nombre del elemento y el atributo (o entre atributos, si hay varios).
-
-· El **nombre del atributo**, seguido de un signo igual (=).
-
-· Comillas de apertura y cierre que encierran el **valor del atributo**.
-
-Puedes también colocar elementos dentro de otros elementos. Esto se llama **anidamiento**.
-
-Algunos elementos no poseen contenido y son llamados **elementos vacíos**.
-Por ejemplo:
-
-&lt;img src="images/firefox-icon.png" alt="Mi imagen de prueba"&gt;
-Este elemento posee atributos, pero no tiene etiqueta de cierre (&lt;/img&gt;) ni contenido encerrado.
-
-### Estructura básica de un fichero HTML
-
-· Una página **HTML** básica incluye una declaración **DOCTYPE**, un elemento html, y dentro de este, un head y un body.
-
-· El **head** contiene metadatos y enlaces a hojas de estilo y scripts, mientras que el **body** contiene el contenido principal de la página web.
-
-&lt;!DOCTYPE html&gt;
-
-&lt;html&gt;
-
-&lt;head&gt;
-
-&lt;meta charset="utf-8"&gt;
-
-&lt;title&gt;Mi página de prueba&lt;/title&gt;
-
-&lt;link rel="icon" href="favicon.png"&gt;
-
-&lt;/head&gt;
-
-&lt;body&gt;
-
-&lt;img src="images/firefox-icon.png" alt="Mi imagen de prueba"&gt;
-
-&lt;/body&gt;
-
-&lt;/html&gt;
-
-
-· **&lt;!DOCTYPE html&gt;** indica el tipo de documento.
-
-· **&lt;html&gt;&lt;/html&gt;** el elemento &lt;html&gt;. Este elemento encierra todo el contenido de la página entera y, a veces, se le conoce como el elemento raíz (root element).
-
-· **&lt;head&gt; &lt;/head&gt;** el elemento &lt;head&gt;. Este elemento actúa como un contenedor de todo aquello que quieres incluir en la página HTML que no es contenido visible por los visitantes de la página.
-
-### Estructura básica de un fichero HTML (2)
-
-&lt;!DOCTYPE html&gt;
-
-&lt;html&gt;
-
- &lt;head&gt;
-
-  &lt;meta charset="utf-8"&gt;
-
-  &lt;meta name="description" content="Esta es una página web de ejemplo que demuestra el uso de metadatos, estilos CSS y otras características básicas de HTML."&gt;
-
-  &lt;meta name="keywords" content="HTML, CSS, ejemplo, metadatos, favicon"&gt;
-
- &lt;title&gt;Mi página de prueba&lt;/title&gt;
-
-  &lt;link rel="icon" href="favicon.png"&gt;
-
-  &lt;link rel="stylesheet" href="styles.css"&gt;
-
-  &lt;script src="script.js"&gt;&lt;/script&gt;
-
-  &lt;style&gt;
-
-   body {
-
-    font-family: Arial, sans-serif;
-
-    background-color: #f4f4f9;
-
-   }
-
-  &lt;/style&gt;
-
- &lt;/head&gt;
-
- &lt;body&gt;
-
-  &lt;img src="images/firefox-icon.png" alt="Mi imagen de prueba"&gt;
-
- &lt;/body&gt;
-
-&lt;/html&gt;
-
-1. ### ESTRUCTURA BÁSICA DE UN FICHERO HTML
-
-Un documento HTML define la estructura básica de una página web. Contiene dos secciones principales:
-
-   - &lt;head&gt;: incluye metadatos, información adicional y enlaces a archivos externos 
-      (como CSS o scripts).
-
-   - &lt;body&gt;: contiene todo el contenido visible de la página (texto, imágenes, enlaces, etc.).
-
-## Ejemplo básico:
-
-&lt;!DOCTYPE html&gt;
-
-&lt;html&gt;
-
- &lt;head&gt;
-
-  &lt;meta charset="utf-8"&gt;
-
-  &lt;title&gt;Mi página web&gt;/title&gt;
-
- &lt;/head&gt;
-
- &lt;body&gt;
-
-  &lt;h1&gt;Título principal&lt;/h1&gt;
-
-  &lt;p&gt;Este es un párrafo.&lt;/p&gt;
-
- &lt;/body&gt;
-
-&lt;/html&gt;
-
-**Dentro del** &lt;head&gt; **pueden incluirse etiquetas importantes como:**
-
-&lt;meta name="viewport" content="width=device-width"&gt; 
-
-**-Permite que el sitio sea adaptable a diferentes dispositivos.**
-    
-&lt;meta name="description" content="Descripción del sitio"&gt; 
-
-**-Utilizada por los motores de búsqueda.**
-    
-&lt;meta name="robots" content="index, follow"&gt; 
-
-**-Indica a los buscadores si deben indexar la página.**
-
-
-2. **ELEMENTOS DE BLOQUE Y DE LÍNEA**
-
-    Los elementos HTML dentro del &lt;body&gt; se dividen en dos tipos:
-
-    · Elementos de bloque:
-
-    - _Ocupan todo el ancho que pueda utilizar y comienzan en una nueva línea._
-
-    - Ejemplos:
-
-    &lt;h1&gt; a &lt;h6&gt;, &lt;p&gt;, &lt;div&gt;, &lt;blockquote&gt;, &lt;pre&gt;, &lt;ul&gt;, &lt;table&gt;.
-
-    - _Se usan para estructurar secciones grandes del contenido._
-
-    · _Elementos de línea:_
-
-    - _Solo ocupan el espacio necesario y no crean una nueva línea._
-
-    - **Ejemplos:**
-
-    &lt;em&gt;, &lt;strong&gt;, &lt;span&gt;, &lt;a&gt;, &lt;img&gt;, &lt;code&gt;, &lt;q&gt;.
-
-    - _Se usan para resaltar o enlazar partes del texto._
-
-
-3. **NORMAS BÁSICAS DE LAS ETIQUETAS HTML**
-
-    · _Las etiquetas vienen en pares:_
-
-    &lt;p&gt;Texto&lt;/p&gt;
-
-    · _Algunas etiquetas son vacías (no tienen cierre):_
-
-    &lt;img&gt;, &lt;br&gt;, &lt;input&gt;
-
-    · _Deben anidarse correctamente:_
-
-    &lt;b&gt;&lt;i&gt;Texto&lt;/i&gt;&lt;/b&gt; es correcto.
-
-    &lt;b&gt;&lt;i&gt;Texto&lt;/b&gt;&lt;/i&gt; es incorrecto.
-
-    · _Los atributos se colocan en la etiqueta de apertura:_
-
-    &lt;img src="imagen.jpg" alt="Descripción"&gt;
-
-
-4. **COMENTARIOS**
-
-    Los comentarios permiten añadir anotaciones que no se muestran en el navegador.
-
-    _Sintaxis:_
-
-    &lt;!-- comentario --&gt;
-
-    Ejemplo de uso:
-
-    &lt;!DOCTYPE html&gt;
-
-    &lt;html&gt;
-
-     &lt;head&gt;
-
-      &lt;title&gt;Título&lt;/title&gt;
-
-      &lt;/head&gt;
-
-      &lt;body&gt;
-
-       <!-- Cabecera -->
-
-       <!-- Menú de navegación -->
-
-       <!-- Contenido principal -->
-
-       <!-- Pie de página -->
-
-    &lt;/body&gt;
-
-     &lt;/html&gt;
-
-
-5. **LEGIBILIDAD Y ORGANIZACIÓN DEL CÓDIGO**
-
-    Es fundamental que el código sea claro y legible para otros desarrolladores.
-
-    · _Recomendaciones:_
-
-    - Usar comentarios claros.
-
-        - Mantener sangrías correctas.
-
-        - Organizar los archivos por carpetas (css, images, js).
-
-        - Evitar líneas demasiado largas.
-
-    · _Motivo:_
-
-    Facilita la colaboración y el mantenimiento del proyecto.
-
-
-6. **ETIQUETAS BÁSICAS DE HTML**
-
-    · _Encabezados:_
-
-    &lt;h1&gt; a &lt;h6&gt; - Títulos y subtítulos (bloque).
-
-    · _Párrafos:_
-
-    &lt;p&gt; - Agrupa frases relacionadas (bloque).
-
-    · _Saltos de línea:_
-
-    &lt;br&gt; - Inserta un salto de línea.
-
-    · _Separadores:_
-
-    &lt;hr&gt; - Crea una línea horizontal divisoria.
-
-    · _Énfasis:_
-
-    &lt;em&gt; - Texto en cursiva.
-
-    &lt;strong&gt; - Texto en negrita.
-
-    · _Span:_
-
-    &lt;span&gt; - Contenedor en línea para aplicar estilos dentro de un texto.
-
-
-7. **RUTAS EN HTML**
-
-    · **Ruta absoluta:**
-
-    Especifica la dirección completa del archivo en la web.
-
-     _Ejemplo:_
-
-    &lt;img src="https://www.example.com/imagen.jpg" alt="Ejemplo"&gt;
-
-    · **Ruta relativa:**
-
-    Especifica la ubicación del archivo respecto al documento actual.
-
-    _Ejemplo:_
-
-    &lt;img src="images/logo.png" alt="Logo del sitio"&gt;
-
-
-8. **ENLACES (&lt;a&gt;)**
-
-    · _Permiten navegar entre documentos mediante el atributo href._
-
-    _Ejemplo:_
-
-    &lt;a href="https://www.ejemplo.com"&gt;Ir al sitio&lt;/a&gt;
-
-    · _Enlaces externos:_
-
-    Conectan con páginas fuera del sitio.
-
-    · _Enlaces locales:_
-
-    Conectan con documentos del mismo sitio (usando rutas relativas).
-
-    · _Atributos comunes:_
-
-    - href: destino del enlace.
-
-    - title: texto informativo al pasar el cursor.
-
-
-9. **FORMULARIOS**
-
-    · Sirven para interactuar con el usuario y enviar información al servidor.
-
-    · _Tipos de controles:_
-
-    - &lt;input type="text"&gt; - campo de texto.
-
-    - &lt;input type="password"&gt; - contraseña.
-
-    - &lt;input type="radio"&gt; - botón de opción.
-
-    - &lt;input type="checkbox"&gt; - casilla de verificación.
-
-    - &lt;button&gt; - botón de envío.
-
-    - &lt;select&gt; - lista desplegable.
-
-    - &lt;textarea&gt; - área de texto.
-
-    - &lt;input type="file"&gt; - subida de archivos.
-
-    · Cada control debe tener un atributo name para identificar el dato enviado.
-
-
-10. **ETIQUETA &lt;form&gt;**
-
-    · Se utiliza para crear formularios.
-
-    · _Atributos principales:_
-
-    - action: URL a la que se enviarán los datos.
-
-    - method: método de envío (GET o POST).
-
-    - enctype: cómo se codifican los datos.
-
-    - target: dónde se mostrará la respuesta (_self o _blank).
-
-    · _Ejemplo completo:_
-
-    &lt;form action="process.php" method="post" enctype="multipart/form-data"&gt;
-
-     &lt;label for="name"&gt;Nombre:&lt;/label&gt;
-
-     &lt;input type="text" id="name" name="name"&gt;
-
-     &lt;label for="email"&gt;Correo electrónico:&lt;/label&gt;
-
-     &lt;input type="email" id="email" name="email"&gt;
-
-     &lt;label for="file"&gt;Subir archivo:&lt;/label&gt;
-
-     &lt;input type="file" id="file" name="file"&gt;
-
-     &lt;button type="submit"&gt;Enviar&lt;/button&gt;
-
-    &lt;/form&gt;
-
-### GitHub
+<html>: elemento raíz
+
+<head>: metadatos y enlaces externos
+
+<body>: contenido visible
+
+```html
+Metadatos importantes en <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Descripción del sitio">
+<meta name="robots" content="index, follow">
+ ```
+# Elementos de bloque y de línea
+## Elementos de bloque
+Ocupan todo el ancho disponible y crean una nueva línea.
+
+Ejemplos:
+ ```html
+<h1>, <p>, <div>, <ul>, <table>
+   ```
+ 
+## Elementos de línea
+Solo ocupan el espacio necesario y no generan salto de línea.
+
+__Ejemplos:__
+
+ ```html
+<em>, <strong>, <span>, <a>, <img>
+ ```
+### Normas básicas de HTML
+ ```html
+<p>Texto</p>
+Algunas son vacías
+<img>, <br>, <input>
+ ```
+
+Deben anidarse correctamente
+
+Los atributos van en la etiqueta de apertura
+
+## Comentarios en HTML
+Los comentarios no se muestran en el navegador.
+ ```html
+<!-- Comentario HTML -->
+  ```
+Se usan para explicar el código o separar secciones.
+
+Legibilidad y organización del código
+
+### Buenas prácticas:
+
+1. Usar sangría correcta
+
+2. Añadir comentarios claros
+
+3. Organizar archivos en carpetas (css, images, js)
+
+4. Mantener el código limpio y ordenado
+
+# Etiquetas básicas de HTML
+ ```html
+Encabezados: <h1> a <h6>
+
+Párrafos: <p>
+
+Salto de línea: <br>
+
+Separador: <hr>
+
+Énfasis: <em>, <strong>
+
+Contenedor en línea: <span>
+ ```
+
+# Listas en HTML 
+
+## Lista desordenada 
+ ```html
+<ul>
+  <li>Elemento 1</li>
+  <li>Elemento 2</li>
+</ul>
+ ```
+## Lista ordenada 
+ ```html
+<ol>
+  <li>Elemento A</li>
+  <li>Elemento B</li>
+</ol>
+ ```
+## Listas anidadas
+ ```html
+<ul>
+  <li>Lenguajes
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+    </ul>
+  </li>
+</ul>
+```
+# Rutas en HTML
+
+## Ruta absoluta
+
+```html
+<img src="https://www.example.com/images/logo.png" alt="Logo">
+ ```
+## Ruta relativa
+ ```html
+<img src="images/logo.png" alt="Logo">
+ ```
+## Imágenes en HTML
+ ```html
+<img src="media/logo.png" alt="Logo de la web" width="200">
+```
+# Atributos
+src
+
+alt
+
+width
+
+height
+
+# Enlaces HTML 
+ ```html 
+<a href="https://www.ejemplo.com" title="Ejemplo">Ir al sitio</a>
+ ```
+# Enlaces internos (anclas)
+ ```html
+<h2 id="contacto">Contacto</h2>
+<a href="#contacto">Ir a contacto</a>
+ ```
+# Contenedores HTML 
+ ```html
+<div class="contenedor">
+  <h2>Título</h2>
+  <p>Texto</p>
+</div>
+```
+Se usan para organizar contenido, aplicar estilos y manipular con JavaScript.
+
+# Etiquetas semánticas HTML5
+ ```
+<header></header>
+<nav></nav>
+<main></main>
+<section></section>
+<article></article>
+<footer></footer>
+ ```
+Mejoran la accesibilidad y el SEO.
+
+# Formularios en HTML
+ ```html
+<form action="process.php" method="post">
+  <label>Nombre:</label>
+  <input type="text" name="nombre" required>
+
+  <label>Email:</label>
+  <input type="email" name="email">
+
+  <label>
+    <input type="checkbox"> Acepto condiciones
+  </label>
+
+  <button type="submit">Enviar</button>
+</form>
+ ```
+ ## Resultado formulario
+ <form action="process.php" method="post">
+  <label>Nombre:</label>
+  <input type="text" name="nombre" required>
+
+  <label>Email:</label>
+  <input type="email" name="email">
+
+  <label>
+    <input type="checkbox"> Acepto condiciones
+  </label>
+
+  <button type="submit">Enviar</button>
+</form>
+
+# Tablas en HTML
+ ```html
+<table border="1">
+  <caption>Clasificación</caption>
+
+  <thead>
+    <tr>
+      <th>Posición</th>
+      <th>Nombre</th>
+      <th>Puntos</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Ana</td>
+      <td>98</td>
+    </tr>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td colspan="3">Resultados finales</td>
+    </tr>
+  </tfoot>
+</table>
+ ```
+# Resultado Tabla
+<table border="1">
+  <caption>Clasificación</caption>
+
+  <thead>
+    <tr>
+      <th>Posición</th>
+      <th>Nombre</th>
+      <th>Puntos</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Ana</td>
+      <td>98</td>
+    </tr>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td colspan="3">Resultados finales</td>
+    </tr>
+  </tfoot>
+</table>
+
+# Resumen HTML
+HTML define la estructura de una web
+
+Usa etiquetas para organizar el contenido
+
+No da estilo ni comportamiento
+
+Es la base de cualquier página web
+
+
+## GitHub
 
 1. Primero en el buscador de nuestro navegador escribiremos GitHub
 2. Una vez dentro iniciamos sesion con nuestra cuenta y si no tenemos nos registramos.
@@ -491,16 +398,24 @@ Un documento HTML define la estructura básica de una página web. Contiene dos 
 6. Una vez tengamos el repositorio hecho si queremos hacer el pages iremos a ajustes y luego a pages.
 7. Una vez dentro nos aparece una seccion que dice Branch, donde dice None clicamos y cambiamos a main, clicamos en save y esperamos a que se genere el pages de nuestro repositorio.
 
-### Git 
+## Git 
 
 1. Para clonar un repositorio del GitHub con el git deberemos copiar el code que nos sale en la pantalla principal del repositorio dentro del GitHUb.
+![git 1](./1_imagen.png)
 2. Una vez el codigo este copiado abriremos la carpeta donde tengamos todos los repositorios creados.
+![git 2](./2_imagen.png)
 3. Una vez dentro arriba donde sale la ruta la eliminaremos y escribiremos cmd y clicaremos enter.
-4. Despues en el cmd escribiremos git init y el codigo del Repositorio.
+![git 3](./3_imagene.png)
+4. Despues en el cmd escribiremos git clone y el codigo del Repositorio.
+![git 4](./4_imagen.png)
 5. Luego cerraremos ese cmd y entraremos en la carpeta del repositorio que se ha clonado con el comando anterior. En la ruta de arriba escribiremos cmd y enter.
-5. Dentro del cmd escribiremos git init, despues git add .
-6. Una vez hecho eso cuando queramos subir cambios que hemos realizado en el visual escribiremos git commit -m "texto informativo"
-7. Y por ultimo escribiremos git push origin main y ya estaran subidos los cambios.
+![git 5](./5_imagen.png)
+6. Dentro del cmd escribiremos git init, despues git add .
+![git 6](./6_imagen.png)
+7. Una vez hecho eso cuando queramos subir cambios que hemos realizado en el visual escribiremos git commit -m "texto informativo"
+![git 7](./7_imagen.png)
+8. Y por ultimo escribiremos git push origin main y ya estaran subidos los cambios.
+![git 8](./8_imagen.png)
 
 CSS
 
@@ -660,7 +575,7 @@ div {
   border: 2px solid black;
 }
 ```
-
+![Box Model](./MoxModel-secciones.png)
 
 ---
 
@@ -688,7 +603,8 @@ position: fixed;
 
 ## Diseño Responsive
 
-```@media (max-width:768px) {
+```css
+@media (max-width:768px) {
   body {
     background: green;
   }
