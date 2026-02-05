@@ -94,16 +94,19 @@ Un elemento HTML suele estar compuesto por:
 ### Ejemplo
 ```html
 <p>Hola mundo</p>
-Atributos HTML
+```
+## Atributos HTML
 Los atributos añaden información adicional a los elementos.
 
-Ejemplo
+## Ejemplo
+```html
 <p class="gato">Mi gato es muy gruñón</p>
 class → nombre del atributo
 
 gato → valor del atributo
+```
 
-Normas de los atributos
+## Normas de los atributos
 Siempre van en la etiqueta de apertura
 
 Siguen el formato nombre="valor"
@@ -113,16 +116,20 @@ Deben ir entre comillas
 Anidamiento y elementos vacíos
 HTML permite anidar elementos, es decir, colocar unos dentro de otros.
 
-Ejemplo correcto
+## Ejemplo correcto
+```html
 <p><strong>Texto importante</strong></p>
+```
 Algunos elementos no tienen contenido ni etiqueta de cierre.
 Se llaman elementos vacíos.
 
-Ejemplo
+## Ejemplo
+```html
 <img src="images/logo.png" alt="Logo de la web">
-Estructura básica de un documento HTML
+```
+## Estructura básica de un documento HTML
 Toda página HTML tiene una estructura básica:
-
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -134,7 +141,9 @@ Toda página HTML tiene una estructura básica:
     <p>Contenido de la página</p>
   </body>
 </html>
-Elementos principales
+```
+## Elementos principales
+```html
 <!DOCTYPE html>: indica el tipo de documento
 
 <html>: elemento raíz
@@ -142,9 +151,11 @@ Elementos principales
 <head>: metadatos y enlaces externos
 
 <body>: contenido visible
+  ```
 
+
+## Metadatos importantes en `<head>`
 ```html
-Metadatos importantes en <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <meta name="description" content="Descripción del sitio">
@@ -154,7 +165,7 @@ Metadatos importantes en <head>
 ## Elementos de bloque
 Ocupan todo el ancho disponible y crean una nueva línea.
 
-Ejemplos:
+## Ejemplos:
  ```html
 <h1>, <p>, <div>, <ul>, <table>
    ```
@@ -162,7 +173,7 @@ Ejemplos:
 ## Elementos de línea
 Solo ocupan el espacio necesario y no generan salto de línea.
 
-__Ejemplos:__
+## Ejemplos:
 
  ```html
 <em>, <strong>, <span>, <a>, <img>
@@ -255,13 +266,18 @@ Contenedor en línea: <span>
 <img src="media/logo.png" alt="Logo de la web" width="200">
 ```
 # Atributos
-src
+- **src** (source):  
+  Indica la **ruta o dirección del archivo de imagen** que se va a mostrar. Puede ser una ruta relativa, una ruta absoluta o una URL externa.
 
-alt
 
-width
+- **alt** (alternative text):  
+  Proporciona un **texto alternativo** que se muestra si la imagen no puede cargarse. También es fundamental para la **accesibilidad** y el **SEO**.
 
-height
+- **width**:  
+  Define el **ancho de la imagen**. Puede indicarse en píxeles (`px`) o como valor numérico directamente en HTML.
+
+- **height**:  
+  Define la **altura de la imagen**. Si no se especifica, el navegador mantiene la proporción original de la imagen.
 
 # Enlaces HTML 
  ```html 
@@ -282,7 +298,7 @@ height
 Se usan para organizar contenido, aplicar estilos y manipular con JavaScript.
 
 # Etiquetas semánticas HTML5
- ```
+ ```html 
 <header></header>
 <nav></nav>
 <main></main>
@@ -426,7 +442,7 @@ Es la base de cualquier página web
 CSS (**Cascading Style Sheets**) es el lenguaje que se utiliza para dar estilo a las páginas web.  
 Mientras que HTML se encarga de la estructura y el contenido, CSS controla el diseño visual.
 
-Con CSS podemos cambiar:
+### Con CSS podemos cambiar:
 
 - Colores
 - Tamaños de letra
