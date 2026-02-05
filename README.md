@@ -661,6 +661,7 @@ div {
 }
 ```
 
+
 ---
 
 ## Display
@@ -683,6 +684,15 @@ position: static;
 position: relative;
 position: absolute;
 position: fixed;
+```
+
+## Diseño Responsive
+
+```@media (max-width:768px) {
+  body {
+    background: green;
+  }
+}
 ```
 
 ---
