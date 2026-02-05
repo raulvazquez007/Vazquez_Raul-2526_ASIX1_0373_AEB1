@@ -417,7 +417,7 @@ Es la base de cualquier página web
 8. Y por ultimo escribiremos git push origin main y ya estaran subidos los cambios.
 ![git 8](./8_imagen.png)
 
-CSS
+# CSS
 
 ![CSS Logo](./descarga.png)
 
