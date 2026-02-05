@@ -502,3 +502,192 @@ Un documento HTML define la estructura básica de una página web. Contiene dos 
 6. Una vez hecho eso cuando queramos subir cambios que hemos realizado en el visual escribiremos git commit -m "texto informativo"
 7. Y por ultimo escribiremos git push origin main y ya estaran subidos los cambios.
 
+CSS
+
+![CSS Logo](./descarga.png)
+
+## ¿Qué es CSS?
+
+CSS (**Cascading Style Sheets**) es el lenguaje que se utiliza para dar estilo a las páginas web.  
+Mientras que HTML se encarga de la estructura y el contenido, CSS controla el diseño visual.
+
+Con CSS podemos cambiar:
+
+- Colores
+- Tamaños de letra
+- Márgenes y espacios
+- Posición de los elementos
+- Fondos y bordes
+
+---
+
+## ¿Cómo se aplica CSS?
+
+Hay **tres formas** de aplicar CSS a un documento HTML.
+
+---
+
+### CSS en línea
+
+Se escribe directamente dentro de una etiqueta HTML usando el atributo `style`.
+
+```html
+<p style="color: red;">Texto en rojo</p>
+```
+
+No es la forma más recomendable, pero sirve para pruebas rápidas.
+
+---
+
+### CSS interno
+
+Se escribe dentro de la etiqueta `<style>` en el `<head>` del documento.
+
+```html
+<style>
+  p {
+    color: blue;
+  }
+</style>
+```
+
+---
+
+### CSS externo (el más usado)
+
+Se escribe en un archivo `.css` aparte y se enlaza desde HTML.
+
+```html
+<link rel="stylesheet" href="styles.css">
+```
+
+Esto permite tener el código más ordenado y fácil de mantener.
+
+---
+
+## Sintaxis básica de CSS
+
+```css
+selector {
+  propiedad: valor;
+}
+```
+
+### Ejemplo
+
+```css
+p {
+  color: green;
+  font-size: 16px;
+}
+```
+
+---
+
+## Selectores básicos
+
+### Selector de etiqueta
+
+Selecciona todas las etiquetas iguales.
+
+```css
+p {
+  color: black;
+}
+```
+
+### Selector de clase
+
+Se usa con `.` y puede repetirse en varios elementos.
+
+```css
+.texto {
+  color: blue;
+}
+```
+
+### Selector de id
+
+Se usa con `#` y es único.
+
+```css
+#titulo {
+  font-size: 24px;
+}
+```
+
+---
+
+## Colores en CSS
+
+Los colores se pueden definir de varias formas:
+
+```css
+color: red;
+color: #ff0000;
+color: rgb(255, 0, 0);
+```
+
+---
+
+## Tipografía
+
+```css
+p {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+```
+
+---
+
+## Modelo de caja (Box Model)
+
+Todos los elementos HTML se comportan como una caja formada por:
+
+- **Content**: el contenido
+- **Padding**: espacio interno
+- **Border**: borde
+- **Margin**: espacio externo
+
+### Ejemplo
+
+```css
+div {
+  margin: 10px;
+  padding: 15px;
+  border: 2px solid black;
+}
+```
+
+---
+
+## Display
+
+Define cómo se muestra un elemento en la página.
+
+```css
+display: block;
+display: inline;
+display: inline-block;
+display: none;
+```
+
+---
+
+## Posicionamiento básico
+
+```css
+position: static;
+position: relative;
+position: absolute;
+position: fixed;
+```
+
+---
+
+## Conclusión
+
+HTML se encarga de la **estructura** y CSS del **diseño**.  
+Usarlos juntos permite crear páginas web completas, ordenadas y visualmente atractivas.
