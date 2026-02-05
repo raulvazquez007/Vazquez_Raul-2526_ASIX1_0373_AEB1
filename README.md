@@ -502,6 +502,332 @@ Un documento HTML define la estructura básica de una página web. Contiene dos 
 6. Una vez hecho eso cuando queramos subir cambios que hemos realizado en el visual escribiremos git commit -m "texto informativo"
 7. Y por ultimo escribiremos git push origin main y ya estaran subidos los cambios.
 
+
+
+# Apuntes de HTML 
+
+---
+
+## 1. ¿Qué es HTML?
+**HTML (HyperText Markup Language)** es el lenguaje estándar para crear páginas web.  
+Se encarga de **definir la estructura y el contenido** que se muestra en el navegador.
+
+HTML **no es un lenguaje de programación**, ya que no tiene bucles, condiciones ni funciones.
+- El **estilo** se aplica con **CSS**
+- El **comportamiento** se controla con **JavaScript**
+
+---
+
+## 2. Significado de las siglas HTML
+- **HyperText**: texto que permite enlazar con otros documentos o recursos.
+- **Markup**: el contenido se organiza mediante etiquetas.
+- **Language**: tiene reglas y estructura propias.
+
+---
+
+## 3. Elementos HTML
+Un elemento HTML está compuesto por:
+1. **Etiqueta de apertura**
+2. **Contenido**
+3. **Etiqueta de cierre**
+
+Ejemplo:
+```html
+<p>Hola</p>
+4. Etiquetas HTML
+Las etiquetas indican al navegador qué tipo de contenido se está mostrando.
+
+Etiquetas básicas de estructura
+<html>: contiene todo el documento HTML.
+
+<head>: contiene información no visible de la página.
+
+<body>: contiene el contenido visible.
+
+5. Atributos HTML
+Los atributos añaden información adicional a las etiquetas.
+
+Características:
+
+Van en la etiqueta de apertura
+
+Formato: nombre="valor"
+
+Ejemplo:
+
+<img src="imagen.jpg" alt="Descripción de la imagen">
+6. Atributos más comunes 
+id: identificador único de un elemento.
+
+class: permite agrupar elementos para aplicar estilos o scripts.
+
+src: indica la ruta de un recurso (imagen, vídeo, etc.).
+
+alt: texto alternativo para imágenes.
+
+href: destino de un enlace.
+
+title: información adicional que aparece al pasar el ratón.
+
+name: nombre del dato enviado en formularios.
+
+value: valor de un campo de formulario.
+
+placeholder: texto de ayuda dentro de un campo.
+
+required: obliga a rellenar un campo.
+
+disabled: desactiva un elemento.
+
+readonly: campo solo lectura.
+
+7. Anidamiento de elementos
+HTML permite colocar etiquetas dentro de otras.
+
+Ejemplo correcto:
+
+<p><strong>Texto importante</strong></p>
+8. Elementos vacíos
+Son etiquetas que no tienen contenido ni cierre.
+
+Ejemplos:
+
+<img>: imagen
+
+<br>: salto de línea
+
+<hr>: línea divisoria
+
+<input>: campo de formulario
+
+9. Estructura básica de un documento HTML
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mi página web</title>
+  </head>
+  <body>
+    <h1>Hola mundo</h1>
+    <p>Mi primera página web</p>
+  </body>
+</html>
+10. Etiquetas de la estructura 
+<!DOCTYPE html>
+Indica el tipo de documento. Es obligatorio y va al inicio.
+
+<html>
+Elemento raíz que contiene todo el contenido HTML.
+
+<head>
+Contiene información no visible:
+
+<meta>: define metadatos (charset, descripción, autor).
+
+<title>: título de la pestaña del navegador.
+
+<link>: enlaza archivos externos (CSS, favicon).
+
+<style>: estilos CSS internos.
+
+<script>: código JavaScript.
+
+<body>
+Contiene todo el contenido visible de la web.
+
+11. Tipos de elementos HTML
+Elementos de bloque
+Ocupan todo el ancho disponible y crean salto de línea.
+
+<h1> a <h6>: encabezados.
+
+<p>: párrafos.
+
+<div>: contenedor.
+
+<blockquote>: citas largas.
+
+<pre>: texto preformateado.
+
+Elementos de línea
+No crean saltos de línea.
+
+<span>: contenedor en línea.
+
+<em>: énfasis.
+
+<strong>: importancia.
+
+<a>: enlaces.
+
+<code>: código.
+
+12. Etiquetas de texto
+Encabezados
+<h1>Título principal</h1>
+<h2>Subtítulo</h2>
+Se usan para estructurar el contenido jerárquicamente.
+
+Párrafos
+<p>Texto del párrafo</p>
+Énfasis
+<em>Texto enfatizado</em>
+<strong>Texto importante</strong>
+Span
+<span>Texto en línea</span>
+Se usa para aplicar estilos sin romper la línea.
+
+13. Saltos y separadores
+<br>: salto de línea.
+
+<hr>: línea horizontal separadora.
+
+14. Listas
+Lista desordenada (<ul>)
+<ul type="circle">
+  <li>Elemento</li>
+</ul>
+Atributo type:
+
+disc
+
+circle
+
+square
+
+Lista ordenada (<ol>)
+<ol type="A" start="2">
+  <li>Paso</li>
+</ol>
+Atributos:
+
+type: tipo de numeración.
+
+start: valor inicial.
+
+value: valor concreto de un elemento.
+
+15. Rutas
+Ruta absoluta
+Indica la dirección completa:
+
+<img src="https://www.example.com/logo.png">
+Ruta relativa
+Indica la ruta desde el archivo actual:
+
+<img src="images/logo.png">
+16. Imágenes
+Etiqueta:
+
+<img src="media/logo.png" alt="Logo de la web">
+Atributos:
+
+src: ubicación de la imagen.
+
+alt: texto alternativo.
+
+17. Enlaces (<a>)
+<a href="https://example.com" title="Ejemplo">Enlace</a>
+Atributos:
+
+href: destino del enlace.
+
+title: información adicional.
+
+18. Enlaces a anclas
+Crear ancla:
+
+<h2 id="seccion1">Sección 1</h2>
+Enlazar:
+
+<a href="#seccion1">Ir a la sección</a>
+19. Contenedores (<div>)
+<div class="seccion">
+  <p>Contenido</p>
+</div>
+Sirve para agrupar elementos y aplicar estilos o scripts.
+
+20. Formularios
+Etiqueta <form>
+<form action="procesar.php" method="post" target="_self">
+Atributos:
+
+action: URL de envío.
+
+method: get o post.
+
+enctype: tipo de codificación.
+
+target: destino de la respuesta.
+
+Etiqueta <input>
+<input type="text" name="usuario" placeholder="Nombre" required>
+Atributos:
+
+type: tipo de campo.
+
+name: nombre del dato enviado.
+
+id: identificador único.
+
+value: valor del campo.
+
+placeholder: texto orientativo.
+
+required: obligatorio.
+
+disabled: desactivado.
+
+readonly: solo lectura.
+
+Radio y checkbox
+<input type="radio" name="opcion">
+<input type="checkbox" name="condiciones">
+21. Tablas
+Estructura
+<table border="1" width="50%">
+  <caption>Título de la tabla</caption>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ana</td>
+    </tr>
+  </tbody>
+</table>
+Etiquetas de tablas
+<table>: tabla completa.
+
+<thead>: encabezado.
+
+<tbody>: cuerpo.
+
+<tfoot>: pie.
+
+<tr>: fila.
+
+<th>: celda de encabezado.
+
+<td>: celda de datos.
+
+<caption>: título.
+
+Atributos de tablas
+border: grosor del borde.
+
+width: ancho.
+
+align: alineación horizontal.
+
+valign: alineación vertical.
+
+colspan: número de columnas.
+
+rowspan: número de filas.
+
 CSS
 
 ![CSS Logo](./descarga.png)
